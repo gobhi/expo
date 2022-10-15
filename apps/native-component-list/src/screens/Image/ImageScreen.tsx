@@ -11,6 +11,13 @@ export const ImageScreens = [
     },
   },
   {
+    name: 'Image Configurator',
+    route: 'image/configurator',
+    getComponent() {
+      return optionalRequire(() => require('./ImageConfiguratorScreen'));
+    },
+  },
+  {
     name: 'List with thousands images',
     route: 'image/flashlist',
     options: {},

@@ -33,7 +33,7 @@ struct ImageBlurHashOption: Record {
   var height: Double = 32
 
   @Field
-  var punch: Double = 1.0
+  var punch: Float = 1.0
 
   var size: CGSize {
     return CGSize(width: width, height: height)

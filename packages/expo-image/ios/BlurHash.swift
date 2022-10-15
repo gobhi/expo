@@ -6,7 +6,7 @@
 
 import UIKit
 
-internal func image(fromBlurHash blurHash: String, size: CGSize, punch: Double = 1.0) -> UIImage? {
+internal func image(fromBlurHash blurHash: String, size: CGSize, punch: Float = 1.0) -> UIImage? {
   guard blurHash.count >= 6 else {
     return nil
   }
