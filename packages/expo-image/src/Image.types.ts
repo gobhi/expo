@@ -38,6 +38,16 @@ export type ImageProps = ViewProps & {
    */
   transition?: ImageTransition | null;
   /**
+   * The radius of the blur applied to the image.
+   * @default 0
+   */
+  blurRadius?: number;
+  /**
+   * Changes all non-transparent pixels to the given color.
+   * @default null
+   */
+  tintColor?: string | null;
+  /**
    * Called when the image starts to load.
    */
   onLoadStart?: () => void;
