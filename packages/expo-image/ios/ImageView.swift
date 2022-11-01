@@ -55,6 +55,11 @@ public final class ImageView: ExpoView {
     }
     var context = SDWebImageContext()
 
+    if let blurHash = source.blurHash,
+       let blurImage = image(fromBlurHash: blurHash.hash, size: blurHash.size, punch: blurHash.punch) {
+      renderImage(blurImage)
+    }
+
     // Cancel currently running load requests.
     // Each ImageView instance has its own image manager,
     // so it doesn't affect other views.

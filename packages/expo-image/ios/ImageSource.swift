@@ -17,4 +17,25 @@ struct ImageSource: Record {
 
   @Field
   var headers: [String: String]?
+
+  @Field
+  var blurHash: ImageBlurHashOption?
+}
+
+struct ImageBlurHashOption: Record {
+  @Field
+  var hash: String
+
+  @Field
+  var width: Double = 32
+
+  @Field
+  var height: Double = 32
+
+  @Field
+  var punch: Double = 1.0
+
+  var size: CGSize {
+    return CGSize(width: width, height: height)
+  }
 }
